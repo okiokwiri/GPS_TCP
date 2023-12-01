@@ -1,0 +1,14 @@
+17:15:00 **** Incremental Build of configuration Debug for project GPS_TCP ****
+make -j16 all 
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o"
+arm-none-eabi-gcc -o "GPS_TCP.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Oki Okwiri\Documents\Github\GPS_TCP\GPS_TCP\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="GPS_TCP.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: GPS_TCP.elf
+ 
+arm-none-eabi-size  GPS_TCP.elf 
+arm-none-eabi-objdump -h -S GPS_TCP.elf  > "GPS_TCP.list"
+   text	   data	    bss	    dec	    hex	filename
+  13392	     20	   1820	  15232	   3b80	GPS_TCP.elf
+Finished building: default.size.stdout
+ 
+Finished building: GPS_TCP.list
+ 

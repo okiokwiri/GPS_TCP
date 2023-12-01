@@ -282,6 +282,8 @@
   * @{
   */
 
+#define USE_HAL_UART_REGISTER_CALLBACKS	1
+
 #if (USE_HAL_UART_REGISTER_CALLBACKS == 1)
 void UART_InitCallbacksToDefault(UART_HandleTypeDef *huart);
 #endif /* USE_HAL_UART_REGISTER_CALLBACKS */
